@@ -18,14 +18,7 @@ class Solution {
         
     }
     public  boolean helper(String s, int start, int end){
-        if(start==end) return true;
-        if(end-start==1) {
-            if(s.charAt(start)== s.charAt(end)){
-                return true;
-            } else {
-                return false;
-            }
-        }
+        if(start>=end) return true;
         
         if(s.charAt(start)==s.charAt(end)){
             boolean palindrome = helper(s,start+1,end-1);
