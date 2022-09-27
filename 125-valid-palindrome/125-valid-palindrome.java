@@ -20,9 +20,13 @@ class Solution {
     public  boolean helper(String s, int start, int end){
         if(start>=end) return true;
         
-        if(s.charAt(start)==s.charAt(end)){
-            boolean palindrome = helper(s,start+1,end-1);
-            return palindrome;
+        boolean palindrome = helper(s,start+1,end-1);
+        if(palindrome == true){
+            if(s.charAt(start) == s.charAt(end)) {
+                return true;
+            } else {
+                return false;
+            }
         }
         else
             return false;
