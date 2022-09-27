@@ -8,7 +8,7 @@ class Solution {
                 str.append(Character.toLowerCase(c));
             }
         }
-        System.out.println(str);
+        // System.out.println(str);
         
         s = new String(str);
         if(s.length() == 0) return true;
