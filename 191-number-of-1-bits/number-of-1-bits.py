@@ -4,10 +4,8 @@ class Solution:
         
         
         while(n!=0):
-            rem=n%2
-            if rem==1:
-                count+=1
-            n=n//2
+            n= n & n-1
+            count+=1
         return count
 
             
