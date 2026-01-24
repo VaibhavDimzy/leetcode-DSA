@@ -4,12 +4,12 @@ class Solution:
             return False
         # elif n==1:
         #     return True
-        else:
-            while (n>1):
-                rem=n%2
-                if (rem !=0):
-                    return False
-                n=n//2
+    
+        while (n>1):
+            rem=n%2
+            if (rem !=0):
+                return False
+            n=n//2
 
-            return True
+        return True
         
