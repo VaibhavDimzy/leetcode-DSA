@@ -5,7 +5,9 @@ class Solution:
         total=0
 
         for i in nums:
+            print(total)
             total = total^i
+        print(total)
         for i in range(len(nums)+1):
             total=total^i
 
