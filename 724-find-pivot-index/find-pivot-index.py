@@ -22,11 +22,11 @@ class Solution:
         left_sum=0
         for i in nums:
             sum=sum+i
-        print(sum)
+        # print(sum)
 
 
         for i in range(len(nums)):
-            print(left_sum,sum)
+            # print(left_sum,sum)
             if left_sum == (sum-nums[i]):
                 return i
             else:
