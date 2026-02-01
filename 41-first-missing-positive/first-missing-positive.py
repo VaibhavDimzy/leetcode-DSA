@@ -1,18 +1,17 @@
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         size=len(nums)
-        missing_lst=[]
-        for i in range(size+1):
-            missing_lst.append(0)
+        i=0
+        final=[]
+        while(i<size):
+            correctIdx=nums[i]-1
+            if nums[i]<1 or nums[i]>size-1 or nums[correctIdx]==nums[i]  :
+                i+=1
+            else:
+                nums[i],nums[correctIdx]=nums[correctIdx],nums[i]
+        for j in range(size):
+            if j+1!=nums[j]:
+                return(j+1)
 
-        for i in nums:
-            if i <= size and i>0:
-                missing_lst[i]=1
-        
-        for i in range(1,len(missing_lst)):
-            if missing_lst[i]==0:
-                return i
         return size+1
-       
 
-        
